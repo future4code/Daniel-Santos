@@ -1,0 +1,66 @@
+body { margin: 0px;
+
+background-color: yellowgreen;
+    
+}
+    
+ h1 { color: yellow;
+background-color: gray;
+ display: inline;
+position:relative;  
+ left: 43vw
+ }
+       
+.link-paginas { position: relative;
+left: 33vw;
+padding-top: 0px;
+background-color:tomato;
+display: inline;
+top:20px
+}
+    
+h2 { position: relative;
+left: 660px;
+
+top: 30px;
+
+color: purple;
+
+height:70px;
+
+}
+
+.form { position:relative;
+left: 570px;
+
+height:100px;
+
+}
+
+label {
+padding-top: 100px
+}
+
+
+button {
+
+position: relative;    
+left: 680px;
+
+border-color: lime;
+
+background-color: turquoise;
+
+text-decoration: purple;
+
+
+
+}
+
+
+    
+ 
+
+    
+    
+

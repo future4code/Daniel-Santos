@@ -1,0 +1,29 @@
+body { margin: 0px; 
+
+background-color: blueviolet
+
+}
+
+h1 { color: yellow;
+    background-color: gray;
+     display: inline;
+      position:relative;  
+       left: 43vw
+   }
+   
+.link-paginas { position: relative;
+    left: 33vw;
+padding-top: 0px;
+background-color:tomato;
+display: inline;
+top:20px
+}
+
+h2 { position: relative;
+left: 15vw;
+}
+
+td {background-color: yellowgreen;}
+
+th {background-color: tomato;}
+
