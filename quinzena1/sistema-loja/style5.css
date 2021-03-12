@@ -1,0 +1,61 @@
+body { margin:0px ;
+
+    padding:0px;
+
+    background-color: turquoise;
+
+    
+
+}
+
+th { background-color: orange;
+
+}
+
+
+h1 { color: paleturquoise   ;
+    background-color:blueviolet;
+     display: inline;
+      position:relative;  
+       left: 43vw
+    }
+
+
+
+
+
+td { text-align: center;
+
+
+
+}
+
+ table {margin:0 auto;
+
+    border: 1px solid darkturquoise;
+
+    border-collapse: collapse;
+
+    position: relative;
+
+    top: 185px
+
+
+
+
+}
+
+tr:nth-child(even) {
+
+    background-color: lightcoral
+}
+
+
+.link-paginas { position: relative;
+    left: 30vw;
+background-color:blueviolet;
+display: inline;
+top:50px
+}
+
+
