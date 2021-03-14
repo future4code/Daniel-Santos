@@ -1,0 +1,419 @@
+* {
+
+margin:0px;
+padding:0px;
+
+font-family: arial;
+}
+
+ul li {
+
+list-style: none;
+
+}
+
+
+
+
+body {
+
+background-color: blanchedalmond;
+
+}
+
+
+.eu1{
+
+width: 200px;
+margin:0 auto;
+margin-top:150px;
+
+}
+
+
+
+
+div.eu {
+
+width: 150px;
+
+padding: 150px;
+
+display:inline-block;
+
+margin-top: 100px;
+
+margin: 0 auto;
+
+
+border-collapse: collapse;
+
+}
+
+
+
+
+
+.eu > span { 
+
+margin: 0 auto;
+
+margin-top: 60px;
+
+right: 100px;
+
+display: inline-block;
+
+text-align: center;
+
+font-family: arial;
+
+font-size: 15px;
+
+}
+
+
+
+.job > span { 
+
+    margin: 0 auto;
+    
+    margin-top: 60px;
+    
+    right: 100px;
+    
+    display: inline-block;
+    
+    text-align: center;
+    
+    font-family: arial;
+    
+    font-size: 15px;
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+.job1{
+
+    width:150px;
+    margin:0 auto;
+    margin-top:100px;
+    margin-bottom: 1px;
+     
+        
+    }
+
+
+
+div.job {
+
+    width: 150px;
+    
+    padding: 150px;
+    
+    display:inline-block;
+
+    position: relative;
+
+    left: 230px;
+    
+    margin: 0 auto;
+
+    margin-top: 60px;
+
+}
+
+
+header {
+
+background-color: black;
+
+display:flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 20px;
+}
+
+header > h1 {
+
+color:white
+
+}
+
+a {
+
+text-decoration: none;
+
+color: white;
+
+}
+
+
+.menu {
+
+display: flex;
+
+}
+
+.menu > li {
+
+margin: 15px;
+
+}
+
+
+
+.intro { 
+
+ margin: 0 auto;
+        
+margin-top: 80px;
+
+text-align: center;
+ 
+ }
+
+ .intro > p {
+ 
+font-size: 30px;
+
+ 
+
+ }
+
+
+ .edu1{
+
+ width:150px;
+
+ margin:0 auto;
+
+ position: relative;
+
+ right: 350px;
+            
+ margin-top:100px;
+ margin-bottom: 1px; 
+             
+    
+ }
+
+
+ div.edu {
+
+    width: 150px;
+    
+    padding: 150px;
+    
+    display:inline;
+
+    position: relative;
+
+    left: 100px;
+    
+    margin: 0 auto;
+
+    margin-top: 60px;
+
+}
+
+
+div.proj {
+
+ width: 150px;
+        
+padding: 150px;
+        
+display:inline-block;
+    
+ position: relative;
+    
+left: 230px;
+        
+margin: 0 auto;
+    
+margin-top: 30px;
+}
+
+.proj1{
+      
+margin:0 auto; 
+
+margin-top: 200px;
+
+position: relative;
+
+text-align: center;
+
+display:block;
+ 
+}
+
+.proj1 > p {
+
+
+margin-top:30px;
+     
+font-size: 25px;
+
+}
+
+
+.proj > span { 
+
+margin: 0 auto;
+        
+ margin-top: 60px;
+        
+right: 100px;
+        
+display: inline-block;
+        
+text-align: center;
+        
+font-family: arial;
+        
+font-size: 15px;
+        
+ }
+
+ .container {
+        
+width:500px;
+clear: both;
+}
+        
+.container input {
+        
+width:500px;
+clear: both;
+}
+
+
+.container{ 
+
+margin-top: 50px;
+
+position: relative;
+
+left:400px;
+
+
+}
+            
+
+
+
+
+form div + div { margin-top:25px;}
+        
+button { 
+        
+border-color: tomato;
+        
+position:relative;
+        
+top:70px ;
+
+        
+        
+        
+}
+
+
+td { 
+
+margin: 0 auto;
+            
+margin-top: 60px;
+            
+right: 100px;
+            
+ display: inline-block;
+            
+ text-align: center;
+
+padding:50px;
+
+font-family: arial;
+    
+ font-size: 25px;
+            
+ }
+
+     
+
+
+        
+        
+.edd { 
+
+margin: 0 auto;
+            
+ margin-top: 60px;
+            
+ left: 70px;
+            
+display: inline-block;
+            
+text-align: center;
+
+padding:50px;
+
+width: 200px;
+            
+}
+
+.titulo {
+
+ margin:0 auto;
+}
+
+footer {
+
+background-color: black;
+            
+ display:flex;
+            
+justify-content: space-between;
+            
+align-items: center;
+            
+ padding: 100px;
+}
+
+.edu {
+
+margin: 0 auto;
+
+text-align: left;
+
+position: relative;
+
+left: 100px;
+
+}
+
+h3 {
+
+color:white;
+
+font-family: arial;
+
+padding: 40px;
+
+position:flex;
+}
+
