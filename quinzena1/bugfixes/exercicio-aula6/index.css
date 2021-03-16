@@ -11,7 +11,7 @@
 
 h2 {
     background-color: #fe7e02;
-    padding: 10px 5px 10px 5px;
+    padding: 0px 0px 20px 0px;
     color: white;
     text-align: center;
 }
@@ -115,7 +115,7 @@ td button {
 
 
 .back-button {
-    background-color: white;
+    background-color: #fadf63;
     width: 100px;
     height: 20px;
     border: 1px solid black;
