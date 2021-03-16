@@ -47,6 +47,12 @@ div>p:first-child {
     font-family: roboto;
 }
 
+.vazio1{
+
+padding:150px 0px 0px 0px;
+
+}
+
 .botao-amarelo:hover {
     background-color: #c44f00;
 }
@@ -117,7 +123,7 @@ td button {
 
 
 .back-button {
-    background-color: #fadf63;
+    background-color:;
     width: 100px;
     height: 20px;
     border: 1px solid black;
@@ -157,8 +163,15 @@ table {
  position: relative;
 
  left:42vh;
+}
 
- 
+form {
 
+position:relative;
+
+left: 95vh;
+
+top: 10vh;
 
 }
+
