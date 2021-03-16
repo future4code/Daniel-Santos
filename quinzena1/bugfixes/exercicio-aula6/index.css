@@ -34,9 +34,7 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
-    background:;
-}
+
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -127,6 +125,11 @@ td button {
 }
 
 .back-button:hover {
+    background-color: #635a3d
+}
+
+.back-button:active {
+    text-decoration-color: White;
     background-color: #635a3d
 }
 
