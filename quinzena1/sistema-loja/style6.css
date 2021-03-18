@@ -1,0 +1,59 @@
+body { margin:0px ;
+
+    padding:0px;
+
+    background-color: blanchedalmond;
+
+}
+
+
+
+
+.link-paginas { position: relative;
+    margin:0 auto;
+    left: 275px;
+background-color:limegreen;
+display: inline;
+top:50px
+}
+
+
+h1 { color: yellow;
+    background-color: limegreen;
+     display: inline;
+      position:relative;  
+       left: 43vw
+    }
+
+
+.form {
+
+border-color: red;
+
+border: 5px;
+
+position: relative;
+
+left:700px;
+
+top: 150px;
+
+display: inline;
+
+
+
+}
+
+form div + div { margin-top:25px;}
+
+button { 
+
+border-color: lime;
+
+position:relative;
+
+top:70px ;
+
+
+}
+
