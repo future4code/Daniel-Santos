@@ -1,0 +1,19 @@
+*{
+    margin:0;
+}
+
+nav {
+    background-color: blanchedalmond;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+
+}
+
+.icone-e-texto {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+}
+
