@@ -1,0 +1,245 @@
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column-start:3;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #poison {
+  grid-column-start:5
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 1;
+  grid-column-end:4;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 5;
+  grid-column-end:2;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 1;
+  grid-column-end:5;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #poison {
+  grid-column-start:-3
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 2;
+  grid-column-end: span 2;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column-start: 1;
+  grid-column-end: span 5;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column-start: span 3;
+    grid-column-end: 6;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column: 4 / 6
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-column: 2 / 5
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-row-start:3
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-row: 3/6
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #poison {
+  grid-row: 5;
+  grid-column:2;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-row: 1 / 6;
+  grid-column: 2 /6;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+  grid-row: 1 / 4;
+  grid-column: 2 /6;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water-1 {
+    grid-area: 1 / 4 / 6 / 5;
+  }
+  
+  #water-2 {
+  grid-area: 2 / 3 / 5 / 7;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  .water {
+    order: 0;
+  }
+  
+  #poison {
+  order:2;
+  }
+
+  #garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  .water {
+    order: 0;
+  }
+  
+  .poison {
+  order: -2;
+  }
+
+  #garden {
+    display: grid;
+  grid-template-columns:50%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #garden {
+    display: grid;
+  grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+  #water {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #garden {
+    display: grid;
+  grid-template-columns: 100px 3em 40%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+
+  #garden {
+    display: grid;
+  grid-template-columns: 1fr 5fr; 
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+
