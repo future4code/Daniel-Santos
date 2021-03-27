@@ -1,0 +1,137 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    min-height: 100vh;
+    min-width: 100vw;
+    grid-row-gap:10px;
+    grid-column-gap:10px;
+    
+}
+
+header{
+    background-color: red;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2
+}
+
+main{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    
+        
+}
+
+#content1 {
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-column-gap: 10px;
+
+}
+
+#content2 {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-column-gap: 10px;
+}
+
+
+div {
+    
+    border: 1px solid black;
+    
+}
+
+#first-block {
+    background-color:violet;
+    
+}
+
+.blue-block1 {
+    background-color: blue;
+    grid-column: 5   / span 2;
+    grid-row: 3 / span 2
+}
+
+.blue-block4 {
+    background-color: blue;
+    grid-column: 5 / span 2;
+    grid-row: 5 / span 2
+}
+
+.yellow-block5 {
+    background-color: yellow;
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2
+}
+
+.yellow-block2 {
+    background-color: yellow;
+    grid-column: 3 / span 2;
+    grid-row: 5 /span 2;
+}
+
+.green-block3 {
+    background-color: green;
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2
+}
+
+.green-block6 {
+    background-color: green;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 2
+}
+
+.black-block7 {
+    background-color: black;
+    color: white;
+    grid-column: 4 /span 3;
+    grid-row: 7 / span 6;
+}
+
+.black-block8 {
+    background-color: black;
+    color: white;
+    grid-column: 1 /span 3;
+    grid-row: 7 / span 6;
+
+}
+
+.white-block9 {
+    background-color: white;
+    grid-column: 1 / span 2;
+    grid-row: 13 / span 3
+
+
+
+}
+
+.white-block10 {
+    background-color: white;
+    grid-column: 3 / span 2;
+    grid-row: 13 / span 3
+
+
+
+}
+
+.white-block11 {
+    background-color: white;
+    grid-column: 5 / span 2;
+    grid-row: 13 / span 3
+
+
+
+}
