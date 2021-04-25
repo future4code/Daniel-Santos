@@ -273,7 +273,7 @@ function criaRetangulo(lado1, lado2) {
    const retangulo = {
       largura: 0,
       altura: 0,
-      perímetro: lado1 + lado2,
+      perimetro: lado1 + lado2,
       area: lado1 * lado2
    }
 
@@ -292,9 +292,22 @@ criaRetangulo(2,9)
 
 // Exercício 15
 
-function anonimizaPessoa(pessoa) {
-   // implemente sua lógica aqui
+const pessoa = {
+   nome: "Astrodev",
+   idade: 25,
+   email: "astrodev@future4.com.br",
+   endereco: "Rua do Futuro, 4"
 }
+
+function anonimizaPessoa(pessoa) {
+
+   return { ...pessoa,
+   nome : "Anônimo"
+   }
+ 
+}
+
+console.log(anonimizaPessoa(pessoa))
 
 // Exercício 16
 
