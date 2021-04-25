@@ -321,8 +321,9 @@ const arrayDePessoas = [
 // Exercício 16, letra A
 
 function maioresDe18(arrayDePessoas) {
+   let arrayretornoMaior = []
 
-   const arrayretornoMaior = arrayDePessoas.filter((fulano) => {
+   arrayretornoMaior = arrayDePessoas.filter((fulano) => {
       return fulano.idade >= 18
      })
      return arrayretornoMaior
@@ -332,11 +333,18 @@ function maioresDe18(arrayDePessoas) {
 
 console.log(maioresDe18(arrayDePessoas))
 
-// Exercício 16, letra B
+
 
 function menoresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
+   let arrayRetornoMenor = []
+
+  arrayRetornoMenor = arrayDePessoas.filter((fulano) => {
+     return fulano.idade <= 18
+  })
+   return arrayRetornoMenor
 }
+
+console.log(menoresDe18(arrayDePessoas))
 
 // Exercício 17, letra A
 
