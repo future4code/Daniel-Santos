@@ -412,15 +412,47 @@ const pessoas = [
 //Exercício 18, letra A
 
 function retornaPessoasAutorizadas() {
-   // implemente sua lógica aqui
+   
+   let arrayAutorizados = []
+
+      for (let index = 0; index < pessoas.length; index++) {
+
+         if( pessoas[index].idade > 14 && pessoas[index].idade < 60 && pessoas[index].altura > 1.5 ) {
+
+             arrayAutorizados.push(pessoas[index])
+         }
+   
+      }
+
+   return arrayAutorizados
+   
+
 }
+
+console.log(retornaPessoasAutorizadas(pessoas))
 
 
 // Exercício 18, letra B
 
 function retornaPessoasNaoAutorizadas() {
-   // implemente sua lógica aqui
+   let arrayNaoAutorizados = []
+
+   for (let index = 0; index < pessoas.length; index++) {
+
+      if( pessoas[index].idade < 14 || pessoas[index].idade > 60 || pessoas[index].altura < 1.5 ) {
+
+          arrayNaoAutorizados.push(pessoas[index])
+      }
+
+   }
+
+   return arrayNaoAutorizados
+
+
 }
+
+console.log(retornaPessoasNaoAutorizadas(pessoas))
+
 
 //Exercício 19
 
