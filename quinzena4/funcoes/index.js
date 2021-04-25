@@ -1,35 +1,44 @@
-// Exercicio 1
-function imprimirOlaMundo() {
-  console.log('Olá, Mundo!')
-}
+// // Exercicio 1
+// function imprimirOlaMundo() {
+//   console.log('Olá, Mundo!')
+// }
 
-// imprimirOlaMundo()
+// // imprimirOlaMundo()
 
-// Exercicio 2
-function imprimirOlaNome(nome) {
-  console.log('Olá ' + nome)
-}
+// // Exercicio 2
+// function imprimirOlaNome(nome) {
+//   console.log('Olá ' + nome)
+// }
 
-// imprimirOlaNome('Darvas')
-// imprimirOlaNome('Bruno')
-// imprimirOlaNome('Amanda')
-// imprimirOlaNome('Chijo')
-// imprimirOlaNome('Lais')
-// imprimirOlaNome('Caio')
+// // imprimirOlaNome('Darvas')
+// // imprimirOlaNome('Bruno')
+// // imprimirOlaNome('Amanda')
+// // imprimirOlaNome('Chijo')
+// // imprimirOlaNome('Lais')
+// // imprimirOlaNome('Caio')
 
-// Exercício 3
-const soma = (num1, num2) => {
-  console.log('ANTES DO RETURN')
-  return num1 + num2
-}
+// // Exercício 3
+// const soma = (num1, num2) => {
+//   console.log('ANTES DO RETURN')
+//   return num1 + num2
+// }
 
-const valorSomado = soma(1,2)
-console.log(valorSomado)
+// const valorSomado = soma(1,2)
+// console.log(valorSomado)
 
-// Exercício 4
+// // Exercício 4
 
-// Declaração
-// function imprimeValoresDoArray(array) {
+// // Declaração
+// // function imprimeValoresDoArray(array) {
+// //   for(let i = 0; i < array.length; i++) {
+// //     console.log(array[i])
+// //   }
+  
+// //   return array.length
+// // }
+
+// // Expressão
+// const imprimeValoresDoArray = function(array) {
 //   for(let i = 0; i < array.length; i++) {
 //     console.log(array[i])
 //   }
@@ -37,14 +46,25 @@ console.log(valorSomado)
 //   return array.length
 // }
 
-// Expressão
-const imprimeValoresDoArray = function(array) {
-  for(let i = 0; i < array.length; i++) {
-    console.log(array[i])
-  }
+// const tamanho = imprimeValoresDoArray(['a', 'b', 'c', 'd'])
+// console.log(tamanho)
+
+
+// // const valor = Number()
+
+
+function valor(valor ) {
   
-  return array.length
+  if(valor > 10) {
+     return "Valor maior que 10"
+  } else if ( valor === 10) {
+     return "É igual a 10"
+   }
+
+    return "É menor que 10"
+
+  
 }
 
-const tamanho = imprimeValoresDoArray(['a', 'b', 'c', 'd'])
-console.log(tamanho)
+console.log(valor(1))
+
