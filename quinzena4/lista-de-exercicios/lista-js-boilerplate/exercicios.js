@@ -82,62 +82,200 @@ retornaMaiorNumero(arraySegundo)
 
 //Exercício 5
 
-function retornaQuantidadeElementos (array) {
-   // implemente sua lógica aqui
+const arrayTerceiro = [0,1,2,3,4,5,6,,7,8,9,10]
+
+function retornaQuantidadeElementos (array) {  
+   return array.length
 }
+
+retornaQuantidadeElementos(arrayTerceiro)
 
 //Exercício 6
 
+const booleano1 = Boolean(true)
+const booleano2 = Boolean(false)
+const booleano3 = !booleano2 
+const booleano4 = !booleano3
+
+let a = booleano1 && booleano2 && ! booleano4
+
 function retornaExpressoesBooleanas() {
-   // implemente sua lógica aqui
+
+   const arrayDeRespostas = [
+
+    booleano1 && booleano2 && ! booleano4,
+
+    (booleano1 && booleano2) || !booleano3,
+
+    (booleano2 || booleano3) && (booleano4 || booleano1),
+
+    !(booleano2 && booleano3) || !(booleano1 && booleano3),
+
+    !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3),
+
+   ]
+   return arrayDeRespostas  
 }
 
-//Exercício 7
+retornaExpressoesBooleanas()
+
+
+
+
+//Exercício 7 => Pensar em uma nova abordagem 
+
+
 
 function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
+
+   let arrayPar = []
+
+   for (let index = 0; n > arrayPar.length ; index++) {
+   
+   if(index % 2 === 0 ) {
+      arrayPar.push(index)
+   }
+
+   }
+
+   return arrayPar
 }
+
+retornaNumerosPares( 2 )
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
-  // implemente sua lógica aqui
+  
+   let triangulo = 0
+
+   if( a === b && c === b) { 
+
+      return  "Equilátero"
+
+   } else if ( (a === b && c !== b  ) || ( a === c && b !== c )) {
+
+      return " Isóceles"
+
+   } else { return  "Escaleno"}
+
+   
 }
+
+checaTriangulo(3,5,3)
 
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
+   
+   let objetoDeNumeros = {
+      maiorNumero : 0 ,
+
+      maiorDivisivelPorMenor : 0 ,
+
+      diferenca : 0 ,
+   }
+
+   if ( num1 > num2) {
+      objetoDeNumeros.maiorNumero = num1
+   }else { 
+      objetoDeNumeros.maiorNumero = num2
+   }
+   
+   if ( num1 % num2 === 0 ) {
+      objetoDeNumeros.maiorDivisivelPorMenor = Boolean(true)
+   } else { objetoDeNumeros.maiorDivisivelPorMenor = Boolean(false)}
+   
+   if ( ( num1 - num2 ) < 0 ) {
+      objetoDeNumeros.diferenca = (num1 - num2 ) * (-1)
+   } else { objetoDeNumeros.diferenca = (num1 - num2 )}
+
+   return objetoDeNumeros
 }
+
+console.log(comparaDoisNumeros(5, 3))
 
 // Exercício 10
 
+arrayQuinto = [0,1,2,3,4,5,6,7,8,9,10]
+
 function segundoMaiorEMenor(array) {
-   // implemente sua lógica aqui
+   let arraySegundoMaiorMenor = []
+   let maiorNumero = 0
+   let menorNumero = 0
+
+   for ( let index; index < array.length; index++) {
+
+   if (array[index] > maiorNumero) {
+      arraySegundoMaiorMenor.push(array[index])
+   }
+
+   // if (array[index] < menorNumero) {
+   //    arraySegundoMaiorMenor.push(array[index])
+   // }
+
+   }
+
+   return arraySegundoMaiorMenor
+
 }
+
+console.log(segundoMaiorEMenor(arrayQuinto))
 
 //Exercício 11
 
-function ordenaArray(array) {
-   // implemente sua lógica aqui
+const arraySexto = [ -1,-2,-30,-10,30,20,10,50,80,100,1,2,3,4,5,6,7,8,9,10]
+
+
+function ordenaArray(a,b) {
+   
+   return a - b 
 }
+
+console.log(arraySexto.sort(ordenaArray))
 
 // Exercício 12
 
 function filmeFavorito() {
-   // implemente sua lógica aqui
+  const filmeAstrodev = {
+   nome: "O Diabo Veste Prada" ,
+   ano: Number(2006) ,
+   diretor: "David Frankel" ,
+   atores: ["Maryl Strip","Anne Hathaway","Emily Blunt","Stanley Tucci"] 
+  }
+
+  return filmeAstrodev
 }
+
+filmeFavorito()
 
 // Exercício 13
 
 function imprimeChamada() {
-   // implemente sua lógica aqui
+
+   const filmeAstrodev = {
+      nome: "O Diabo Veste Prada" ,
+      ano: Number(2006) ,
+      diretor: "David Frankel" ,
+      atores: ["Maryl Strip","Anne Hathaway","Emily Blunt","Stanley Tucci"] 
+     }
+
+     return `Venha assitir ao filme ${filmeAstrodev.nome}, de ${filmeAstrodev.ano}, dirigido por ${filmeAstrodev.diretor}, 
+     e estrelado por ${filmeAstrodev.atores[0]}, ${filmeAstrodev.atores[1]}, ${filmeAstrodev.atores[2]}, ${filmeAstrodev.atores[3]} `
 }
+
+imprimeChamada()
 
 // Exercício 14
 
 function criaRetangulo(lado1, lado2) {
-   // implemente sua lógica aqui
+   
+   const retangulo = {
+      largura: 0,
+      altura: 0,
+      perímetro: lado1 + lado2,
+      area: lado1 * lado2
+   }
 }
 
 // Exercício 15
