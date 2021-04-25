@@ -353,7 +353,7 @@ const array = [1, 2, 3, 4, 5, 6]
 function multiplicaArrayPor2(array) {
    let arrayDobro = []
    arrayDobro = array.map((numeros) => {
-      return numeros * 2
+      return  numeros * 2 
    })
 
    return arrayDobro
@@ -364,14 +364,39 @@ console.log(multiplicaArrayPor2(array))
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
-  // implemente sua lógica aqui
+   let arrayDobroS = []
+   arrayDobroS = array.map((numeros) => {
+   return  String(numeros * 2) 
+   })
+   
+   return arrayDobroS
 }
+
+console.log(multiplicaArrayPor2S(array))
+
 
 // Exercício 17, letra C
 
 function verificaParidade(array) {
-   // implemente sua lógica aqui
+
+   let paresImpares = []
+
+   paresImpares = array.map((numeros) => {
+      if(numeros % 2 === 0) { 
+         
+         return numeros + " é Par" 
+      } else { 
+         return numeros + " é Impar"
+      }
+   })
+
+   return paresImpares
 }
+
+console.log(verificaParidade(array))
+
+
+
 
 // Exercício 18
 
