@@ -348,9 +348,18 @@ console.log(menoresDe18(arrayDePessoas))
 
 // Exercício 17, letra A
 
+const array = [1, 2, 3, 4, 5, 6]
+
 function multiplicaArrayPor2(array) {
-   // implemente sua lógica aqui
+   let arrayDobro = []
+   arrayDobro = array.map((numeros) => {
+      return numeros * 2
+   })
+
+   return arrayDobro
 }
+
+console.log(multiplicaArrayPor2(array))
 
 // Exercício 17, letra B
 
