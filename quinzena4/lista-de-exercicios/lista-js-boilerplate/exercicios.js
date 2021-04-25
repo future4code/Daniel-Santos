@@ -321,8 +321,16 @@ const arrayDePessoas = [
 // Exercício 16, letra A
 
 function maioresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
+
+   const arrayretornoMaior = arrayDePessoas.filter((fulano) => {
+      return fulano.idade >= 18
+     })
+     return arrayretornoMaior
+    
+   
 }
+
+console.log(maioresDe18(arrayDePessoas))
 
 // Exercício 16, letra B
 
