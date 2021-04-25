@@ -276,7 +276,19 @@ function criaRetangulo(lado1, lado2) {
       perímetro: lado1 + lado2,
       area: lado1 * lado2
    }
+
+   if (lado1 > lado2) {
+      retangulo.largura = lado1
+      retangulo.altura = lado2
+   } else { 
+      retangulo.largura = lado2
+      retangulo.altura = lado1 
+   }
+
+   return retangulo
 }
+
+criaRetangulo(2,9)
 
 // Exercício 15
 
