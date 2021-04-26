@@ -466,8 +466,23 @@ const consultasNome = [
  //Exercício 19, letra A
  
  function ordenaPorNome() {
-  
+
+   let ordemAlfabetica = []
+
+   ordemAlfabetica = consultasNome.sort((a,b) => {
+      if (a.nome > b.nome) {
+         return 1
+
+      }else if ( a.nome < b.nome) {
+         return -1
+      } else {
+         return 0
+      }
+   })
+  return ordemAlfabetica
  }
+
+ console.log(ordenaPorNome(consultasNome))
  
  // Exercício 19, letra B
  
@@ -479,8 +494,27 @@ const consultasNome = [
  ]
  
  function ordenaPorData() {
- 
+
+   let ordemData = []
+
+   ordemData = consultasData.sort((a,b) => {
+      if (a.dataDaConsulta > b.dataDaConsulta) {
+         return 1
+
+      }else if ( a.dataDaConsulta < b.dataDaConsulta) {
+         return -1
+      } else {
+         return 0
+      }
+   })
+  return ordemData
  }
+
+
+ console.log(ordenaPorData(consultasData))
+
+
+
 
 //Exercício 20
 
@@ -493,6 +527,6 @@ const contas = [
   { cliente: "Soter", saldoTotal: 1200, compras: [] }
 ]
 
-function atualizaSaldo() {
-  // implemente sua lógica aqui
+function atualizaSaldo(saldo) {
+
 }
