@@ -8,7 +8,7 @@ function inverteArray(array) {
 
 }
 
-inverteArray(arrayAleatorio)
+console.log(inverteArray(arrayAleatorio))
 
 //Exercício 2
 
@@ -51,7 +51,7 @@ function retornaNumerosPares (array) {
 }
 
 
-retornaNumerosPares(arrayPrimario )
+console.log(retornaNumerosPares(arrayPrimario ))
 
 //Exercício 4
 
@@ -77,7 +77,7 @@ function retornaMaiorNumero(array) {
 
 
 
-retornaMaiorNumero(arraySegundo)
+console.log(retornaMaiorNumero(arraySegundo))
 
 
 //Exercício 5
@@ -88,7 +88,7 @@ function retornaQuantidadeElementos (array) {
    return array.length
 }
 
-retornaQuantidadeElementos(arrayTerceiro)
+console.log(retornaQuantidadeElementos(arrayTerceiro))
 
 //Exercício 6
 
@@ -117,7 +117,7 @@ function retornaExpressoesBooleanas() {
    return arrayDeRespostas  
 }
 
-retornaExpressoesBooleanas()
+console.log(retornaExpressoesBooleanas())
 
 
 
@@ -141,7 +141,7 @@ function retornaNNumerosPares(n) {
    return arrayPar
 }
 
-retornaNumerosPares( 2 )
+console.log(retornaNumerosPares( 2 ))
 
 // Exercício 8
 
@@ -149,31 +149,31 @@ function checaTriangulo(a, b, c) {
   
    let triangulo = 0
 
-   if( a === b && c === b) { 
+   if( a !== b && c !== b) { 
 
-      return  "Equilátero"
+      triangulo =  "Escaleno"
 
-   } else if ( (a === b && c !== b  ) || ( a === c && b !== c )) {
+   } else if ( a === b && c === b) {
 
-      return " Isóceles"
+      triangulo = "Equilátero"
 
-   } else { return  "Escaleno"}
+   } else { triangulo =  "Isóceles"}
 
-   
+   return triangulo
 }
 
-checaTriangulo(3,5,3)
+console.log(checaTriangulo(3,3,2))
 
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
    
    let objetoDeNumeros = {
-      maiorNumero : 0 ,
+      maiorNumero: 0 ,
 
-      maiorDivisivelPorMenor : 0 ,
+      maiorDivisivelporMenor: 0 ,
 
-      diferenca : 0 ,
+      diferenca: 0 ,
    }
 
    if ( num1 > num2) {
@@ -183,8 +183,8 @@ function comparaDoisNumeros(num1, num2) {
    }
    
    if ( num1 % num2 === 0 ) {
-      objetoDeNumeros.maiorDivisivelPorMenor = Boolean(true)
-   } else { objetoDeNumeros.maiorDivisivelPorMenor = Boolean(false)}
+      objetoDeNumeros.maiorDivisivelporMenor = Boolean(true)
+   } else { objetoDeNumeros.maiorDivisivelporMenor = Boolean(false)}
    
    if ( ( num1 - num2 ) < 0 ) {
       objetoDeNumeros.diferenca = (num1 - num2 ) * (-1)
@@ -200,23 +200,23 @@ console.log(comparaDoisNumeros(5, 3))
 arrayQuinto = [0,1,2,3,4,5,6,7,8,9,10]
 
 function segundoMaiorEMenor(array) {
-   let arraySegundoMaiorMenor = []
-   let maiorNumero = 0
-   let menorNumero = 0
+   // let arraySegundoMaiorMenor = []
+   // let maiorNumero = 0
+   // let menorNumero = 0
 
-   for ( let index; index < array.length; index++) {
+   // for ( let index; index < array.length; index++) {
 
-   if (array[index] > maiorNumero) {
-      arraySegundoMaiorMenor.push(array[index])
-   }
-
-   // if (array[index] < menorNumero) {
+   // if (array[index] > maiorNumero) {
    //    arraySegundoMaiorMenor.push(array[index])
    // }
 
-   }
+   // // if (array[index] < menorNumero) {
+   // //    arraySegundoMaiorMenor.push(array[index])
+   // // }
 
-   return arraySegundoMaiorMenor
+   // }
+
+   // return arraySegundoMaiorMenor
 
 }
 
@@ -247,7 +247,7 @@ function filmeFavorito() {
   return filmeAstrodev
 }
 
-filmeFavorito()
+console.log(filmeFavorito())
 
 // Exercício 13
 
@@ -264,7 +264,7 @@ function imprimeChamada() {
      e estrelado por ${filmeAstrodev.atores[0]}, ${filmeAstrodev.atores[1]}, ${filmeAstrodev.atores[2]}, ${filmeAstrodev.atores[3]} `
 }
 
-imprimeChamada()
+console.log(imprimeChamada())
 
 // Exercício 14
 
@@ -288,7 +288,7 @@ function criaRetangulo(lado1, lado2) {
    return retangulo
 }
 
-criaRetangulo(2,9)
+console.log(criaRetangulo(2,9))
 
 // Exercício 15
 
