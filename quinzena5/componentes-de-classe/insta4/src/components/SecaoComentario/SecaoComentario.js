@@ -14,7 +14,7 @@ const InputComentario = styled.input`
 
 export class SecaoComentario extends Component {
 	state = {
-		submit="",
+		coment="",
 
 	}
 
@@ -28,6 +28,7 @@ export class SecaoComentario extends Component {
 			<InputComentario
 				placeholder={'Comentário'}	
 				onChange={this.onChangeComentario}
+				type={this.state.coment}
 			/>
 			<button onClick={this.props.aoEnviar}>Enviar</button>
 		</CommentContainer>
