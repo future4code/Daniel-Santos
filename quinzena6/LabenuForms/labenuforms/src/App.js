@@ -6,16 +6,12 @@ import React from 'react';
 export default class App extends React.Component {
 
   state={
-    dados:{
-        nome:"",
-        idade:"",
-        email:"",
-    }
+    etapa: 1,
 }
 
 
 
-mudarPágina = () => {
+renderizaEtapa = () => {
 
     
     
