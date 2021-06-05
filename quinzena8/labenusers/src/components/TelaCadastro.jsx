@@ -11,12 +11,12 @@ export default class Cadastro extends React.Component {
         this.setState({nome: event.target.value})
     }
 
-    handleEmail = () => {
+    handleEmail = (event) => {
         this.setState({email: event.target.value})
     }
 
     efetuarCadastro = () => {
-        const url ='https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
+        const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
         const body = {
             name: this.state.nome,
             email: this.state.email
@@ -28,10 +28,11 @@ export default class Cadastro extends React.Component {
             }
         })
         .then((res) => {
-            console.log()
+            alert("Usuário cadastrado com exito!")
+            this.setState({nome:"",email:""})
         })
         .catch((err) => {
-            console.log()
+            alert(err.response.data.message)
         })
     }
 
@@ -44,14 +45,14 @@ export default class Cadastro extends React.Component {
                 <input 
                     placeholder={"nome"}
                     value={this.state.nome}
-                    onChange={this.hadleNome()}
+                    onChange={this.hadleNome}
                 />
                 <input 
                     placeholder={"e-mail"}
                     value={this.state.email}
-                    onChange={this.handleEmail()}
+                    onChange={this.handleEmail}
                 />
-                <button onClick={this.efetuarCadastro}/>
+                <button onClick={this.efetuarCadastro}>Cadastrar</button>
             </div>
         )
     }
