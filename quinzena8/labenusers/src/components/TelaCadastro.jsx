@@ -7,7 +7,7 @@ export default class Cadastro extends React.Component {
         email:"",
     }
 
-    hadleNome = (event) => {
+    handleNome = (event) => {
         this.setState({nome: event.target.value})
     }
 
@@ -24,14 +24,16 @@ export default class Cadastro extends React.Component {
 
         axios.post(url, body, {
             headers: {
-                Authorization:"Daniel-Santos"
+                Authorization:"Daniel-Santos-munoz"
             }
         })
         .then((res) => {
+            console.log(res)
             alert("Usuário cadastrado com exito!")
             this.setState({nome:"",email:""})
         })
         .catch((err) => {
+            console.log(err)
             alert(err.response.data.message)
         })
     }
@@ -45,7 +47,7 @@ export default class Cadastro extends React.Component {
                 <input 
                     placeholder={"nome"}
                     value={this.state.nome}
-                    onChange={this.hadleNome}
+                    onChange={this.handleNome}
                 />
                 <input 
                     placeholder={"e-mail"}
