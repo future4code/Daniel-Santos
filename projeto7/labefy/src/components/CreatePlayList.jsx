@@ -2,6 +2,38 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
+const ContainerHome = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center
+`
+
+const Header = styled.header`
+ position: sticky;
+ top: 0;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100px;
+ background-color: #42A1CD;
+ padding: 0 2rem;
+ z-index: 1;
+
+`
+
+const CardNovaPlayList = styled.div`
+  max-width:250px;
+  border: 1px solid limegreen;
+  background-color:#fff;
+  box-shadow: 0px 0px 10px 0px limegreen;
+  border-radius: 10px;
+  text-align: center;
+  padding:10px;
+    
+
+`
+
 export default class NovaPlayList extends React.Component {
 
     state = {
@@ -37,22 +69,24 @@ export default class NovaPlayList extends React.Component {
     render () {
 
         return (
-            
+
             <div>
-                <header>
+                <Header>
                     <div>Labefy</div>
                     <button onClick={this.props.irTelaPlaylist}>Ver PlayLists</button>
-                </header>
-                <div>
-                    <h2>Criar PlayList</h2>
-                    {/* <label>Nome Da PlayList</label> */}
-                    <input 
-                    value={this.state.nomeNovaLista}
-                    placeholder={"Nova Playlist"}
-                    onChange={this.handleNovaPlaylist}
-                    />
-                    <button onClick={this.inserirNovaPlaylist}>Enviar</button>
-                </div>
+                </Header>
+                <ContainerHome>
+                    <CardNovaPlayList>
+                        <h2>Criar PlayList</h2>
+                        {/* <label>Nome Da PlayList</label> */}
+                        <input 
+                        value={this.state.nomeNovaLista}
+                        placeholder={"Nova Playlist"}
+                        onChange={this.handleNovaPlaylist}
+                        />
+                        <button onClick={this.inserirNovaPlaylist}>Enviar</button>
+                    </CardNovaPlayList>
+                </ContainerHome>
             </div>
         )
     }
