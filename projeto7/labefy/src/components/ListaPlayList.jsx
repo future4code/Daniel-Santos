@@ -5,49 +5,63 @@ import axios from "axios";
 export default class PlayLists extends React.Component {
 
     state = {
-        list: []
+        list:[]
     }
 
     componentDidMount() {
-        this.pegarPlayList()
+        this.pegaLista()
     }
 
-    pegarPlayList = () => {
-        const url="https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
+    pegaLista = () => {
+        const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists'
         axios.get(url, {
-            headers: {
-                Authorization: "Daniel-Santos-munoz"
+            headers:{
+                Authorization:"Daniel-Santos-munoz"
+
             }
         })
-        .then((res) => {
-            
-            this.setState({list: res.data})
-            
-
+        .then((resp)  => {
+            console.log(resp)
+            this.setState({list: resp.data.result.list})
         })
         .catch((err) => {
-           console.log(err)
+            console.log(err)
+        })
+
+    }
+
+    deletaLista = (id) => {
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`
+        axios.delete(url, {
+            headers:{
+                Authorization:"Daniel-Santos-munoz"
+            }
+        })
+        .then((resp) => {
+            console.log(resp)
+            this.pegaLista()
+        })
+        .catch((err) => {
+            console.log(err.response.data)
         })
     }
 
 
- 
-
-    render () {
-        // console.log(this.state.list)
-        const listaPlay = this.state.list.map((playlist) => {
-            return <div>{playlist.name}</div>
+    render(){
+        // console.log(this.state.usuario)
+        const listaPlay = this.state.list.map((list) => {
+            return <div key={list.id}>{list.name}
+                <button onClick={() => this.deletaLista(list.id)}>Delete</button>
+            </div>
+            
         })
-        return (
+        return(
             <div>
-                <header>
-                    <button onClick={this.props.irTelaHome}>Voltar para Home</button>
-                </header>
-                <div>
-                    <span>Playlists</span>
-                    {listaPlay}
-                </div>
-                <footer>Footer</footer>
+                <button onClick={this.props.irTelaHome}>Voltar para Home</button>
+                <h2>
+                    Lista de usuários
+                </h2>
+                {listaPlay}
             </div>
         )
     }

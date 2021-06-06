@@ -23,7 +23,7 @@ export default class Lista extends React.Component {
             this.setState({usuario: resp.data})
         })
         .catch((err) => {
-            console.log(err)
+        console.log(err)
         })
 
     }
