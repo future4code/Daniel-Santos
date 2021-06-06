@@ -2,11 +2,27 @@ import React from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
+
+
+const BackColor = '#292828'
+
+
+const ContainerApp = styled.div`
+    display:flex;
+    flex-direction:column;
+    height: 100%;
+    background-color:${BackColor};
+    
+`
+
+
+
 const ContainerHome = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center
+    justify-content:center;
+    padding: 150px;
 `
 
 const Header = styled.header`
@@ -70,7 +86,7 @@ export default class NovaPlayList extends React.Component {
 
         return (
 
-            <div>
+            <ContainerApp>
                 <Header>
                     <div>Labefy</div>
                     <button onClick={this.props.irTelaPlaylist}>Ver PlayLists</button>
@@ -87,7 +103,7 @@ export default class NovaPlayList extends React.Component {
                         <button onClick={this.inserirNovaPlaylist}>Enviar</button>
                     </CardNovaPlayList>
                 </ContainerHome>
-            </div>
+            </ContainerApp>
         )
     }
 }
