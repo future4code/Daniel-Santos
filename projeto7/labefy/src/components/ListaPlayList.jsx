@@ -15,8 +15,7 @@ const ContainerApp = styled.div`
 `
 
 const PlayListAtual = styled.div`
- flex-wrap:wrap;
- overflow-wrap:anywhere;
+
  border: 1px solid limegreen;
  background-color:#fff;
  box-shadow: 0px 0px 10px 0px limegreen;
@@ -31,8 +30,9 @@ const ContainerPlay = styled.div`
  flex-direction: column;
  justify-content: center;
  align-items: center;
- height:100%;
+ height:100vh;
  padding:75px;
+ overflow-y: auto;
 `
 
 const BtnLista = styled.button`
@@ -60,7 +60,7 @@ const Header = styled.header`
 
 `
 const Footer = styled.footer`
- position: sticky;
+ position:sticky;
  top: 0;
  display: flex;
  align-items: center;
@@ -90,6 +90,7 @@ const BtnVoltarHome = styled.button`
 
 const TituloSeleção = styled.h2`
  color:#67ff02;
+ position: static;
 
 `
 
@@ -153,11 +154,11 @@ export default class PlayLists extends React.Component {
                 <Header>
                     <h2>Labefy</h2>
                     <BtnVoltarHome onClick={this.props.irTelaHome}>Home</BtnVoltarHome>
-                </Header>
+                </Header>  
                 <ContainerPlay>
-                    <TituloSeleção>
+                <TituloSeleção>
                         Sua Seleção de PlayLists
-                    </TituloSeleção>
+                </TituloSeleção>
                     {listaPlay}
                 </ContainerPlay>
                     <Footer>

@@ -139,7 +139,6 @@ export default class NovaPlayList extends React.Component {
                 <ContainerHome>
                     <CardNovaPlayList>
                         <h2>Inserir Nova PlayList</h2>
-                        {/* <label>Nome Da PlayList</label> */}
                         <input 
                         value={this.state.nomeNovaLista}
                         placeholder={"Nova Playlist"}
