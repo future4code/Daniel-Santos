@@ -10,7 +10,7 @@ const BackColor = '#292828'
 const ContainerApp = styled.div`
     display:flex;
     flex-direction:column;
-    height: 100%;
+    height: 100vh;
     background-color:${BackColor};
     
 `
@@ -18,11 +18,12 @@ const ContainerApp = styled.div`
 
 
 const ContainerHome = styled.div`
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    padding: 150px;
+ display:flex;
+ height:100%;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ padding: 150px;
 `
 
 const Header = styled.header`
@@ -32,14 +33,31 @@ const Header = styled.header`
  align-items: center;
  justify-content: space-between;
  height: 100px;
- background-color: #42A1CD;
+ background-color: #67ff02;
  padding: 0 2rem;
  z-index: 1;
 
 `
 
+const Footer = styled.footer`
+ position: sticky;
+ top: 0;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100px;
+ background-color: #67ff02;
+ padding: 0 2rem;
+ z-index: 1;
+
+`
+
+
+
+
+
 const CardNovaPlayList = styled.div`
-  max-width:250px;
+  width:600px;
   border: 1px solid limegreen;
   background-color:#fff;
   box-shadow: 0px 0px 10px 0px limegreen;
@@ -48,6 +66,33 @@ const CardNovaPlayList = styled.div`
   padding:10px;
     
 
+`
+
+const Btn = styled.button`
+ width:131px;
+ height:30px;
+ background: #67ff02;
+ border-radius: 5px;
+ border:none;
+ margin:10px;
+ font-size: 16px;
+ line-height: 24px;
+ color: #FEFEFE;
+ font-weight: bold;
+`
+
+const BtnIrSeleção = styled.button`
+ width:131px;
+ height:30px;
+ background: #FEFEFE;
+ border-radius: 5px;
+ border:none;
+ margin:10px;
+ font-size: 16px;
+ line-height: 24px;
+ color:black;
+ font-weight: bold;
+ 
 `
 
 export default class NovaPlayList extends React.Component {
@@ -88,21 +133,23 @@ export default class NovaPlayList extends React.Component {
 
             <ContainerApp>
                 <Header>
-                    <div>Labefy</div>
-                    <button onClick={this.props.irTelaPlaylist}>Ver PlayLists</button>
+                    <h2>Labefy</h2>
+                    <BtnIrSeleção onClick={this.props.irTelaPlaylist}>Ver PlayLists</BtnIrSeleção>
                 </Header>
                 <ContainerHome>
                     <CardNovaPlayList>
-                        <h2>Criar PlayList</h2>
+                        <h2>Inserir Nova PlayList</h2>
                         {/* <label>Nome Da PlayList</label> */}
                         <input 
                         value={this.state.nomeNovaLista}
                         placeholder={"Nova Playlist"}
                         onChange={this.handleNovaPlaylist}
                         />
-                        <button onClick={this.inserirNovaPlaylist}>Enviar</button>
+                        <Btn onClick={this.inserirNovaPlaylist}>Enviar</Btn>
                     </CardNovaPlayList>
                 </ContainerHome>
+                  <Footer>
+                  </Footer>
             </ContainerApp>
         )
     }

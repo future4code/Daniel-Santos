@@ -1,6 +1,98 @@
 import React from "react";
 import axios from "axios";
-// import styled from 'styled-components';
+import styled from 'styled-components';
+
+
+const BackColor = '#292828'
+
+
+const ContainerApp = styled.div`
+ display:flex;
+ flex-direction:column;
+ height: 100vh;
+ background-color:${BackColor};
+    
+`
+
+const PlayListAtual = styled.div`
+ flex-wrap:wrap;
+ overflow-wrap:anywhere;
+ border: 1px solid limegreen;
+ background-color:#fff;
+ box-shadow: 0px 0px 10px 0px limegreen;
+ border-radius: 10px;
+ text-align: center;
+ padding:10px;
+
+`
+
+const ContainerPlay = styled.div`
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height:100%;
+ padding:75px;
+`
+
+const BtnLista = styled.button`
+ width:131px;
+ height:15px;
+ background: #67ff02;
+ border-radius: 5px;
+ border:none;
+ margin:10px;
+ font-size: 16px;
+ line-height: 14px;
+ color: #FEFEFE;
+
+`
+const Header = styled.header`
+ position: sticky;
+ top: 0;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100px;
+ background-color: #67ff02;
+ padding: 0 2rem;
+ z-index: 1;
+
+`
+const Footer = styled.footer`
+ position: sticky;
+ top: 0;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100px;
+ background-color: #67ff02;
+ padding: 0 2rem;
+ z-index: 1;
+
+`
+
+
+
+const BtnVoltarHome = styled.button`
+ width:131px;
+ height:30px;
+ background: #FEFEFE;
+ border-radius: 5px;
+ border:none;
+ margin:10px;
+ font-size: 16px;
+ line-height: 24px;
+ color:black;
+ font-weight: bold;
+ 
+`
+
+const TituloSeleção = styled.h2`
+ color:#67ff02;
+
+`
+
 
 export default class PlayLists extends React.Component {
 
@@ -48,21 +140,29 @@ export default class PlayLists extends React.Component {
 
 
     render(){
-        // console.log(this.state.usuario)
+
         const listaPlay = this.state.list.map((list) => {
-            return <div key={list.id}>{list.name}
-                <button onClick={() => this.deletaLista(list.id)}>Delete</button>
-            </div>
+            return <PlayListAtual key={list.id}>
+            {list.name}
+            <BtnLista onClick={() => this.deletaLista(list.id)}>Delete</BtnLista>
+            </PlayListAtual>
             
         })
         return(
-            <div>
-                <button onClick={this.props.irTelaHome}>Voltar para Home</button>
-                <h2>
-                    Lista de usuários
-                </h2>
-                {listaPlay}
-            </div>
+            <ContainerApp>
+                <Header>
+                    <h2>Labefy</h2>
+                    <BtnVoltarHome onClick={this.props.irTelaHome}>Home</BtnVoltarHome>
+                </Header>
+                <ContainerPlay>
+                    <TituloSeleção>
+                        Sua Seleção de PlayLists
+                    </TituloSeleção>
+                    {listaPlay}
+                </ContainerPlay>
+                    <Footer>
+                    </Footer>
+            </ContainerApp>
         )
     }
 }
