@@ -7,16 +7,16 @@ export default class Cadastro extends React.Component {
         email:"",
     }
 
-    hadleNome = (event) => {
+    handleNome = (event) => {
         this.setState({nome: event.target.value})
     }
 
-    handleEmail = () => {
+    handleEmail = (event) => {
         this.setState({email: event.target.value})
     }
 
     efetuarCadastro = () => {
-        const url ='https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
+        const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
         const body = {
             name: this.state.nome,
             email: this.state.email
@@ -24,14 +24,17 @@ export default class Cadastro extends React.Component {
 
         axios.post(url, body, {
             headers: {
-                Authorization:"Daniel-Santos"
+                Authorization:"Daniel-Santos-munoz"
             }
         })
         .then((res) => {
-            console.log()
+            console.log(res)
+            alert("Usuário cadastrado com exito!")
+            this.setState({nome:"",email:""})
         })
         .catch((err) => {
-            console.log()
+            console.log(err)
+            alert(err.response.data.message)
         })
     }
 
@@ -44,14 +47,14 @@ export default class Cadastro extends React.Component {
                 <input 
                     placeholder={"nome"}
                     value={this.state.nome}
-                    onChange={this.hadleNome()}
+                    onChange={this.handleNome}
                 />
                 <input 
                     placeholder={"e-mail"}
                     value={this.state.email}
-                    onChange={this.handleEmail()}
+                    onChange={this.handleEmail}
                 />
-                <button onClick={this.efetuarCadastro}/>
+                <button onClick={this.efetuarCadastro}>Cadastrar</button>
             </div>
         )
     }
