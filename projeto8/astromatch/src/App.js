@@ -11,8 +11,7 @@ import CardPerfilUsuario from './components/CardUsuário/CardUsuario';
 function App() {
   return (
     <div >
-      <div>Tela Perfis</div>
-     
+      <CardPerfilUsuario/>
     </div>
   );
 }
