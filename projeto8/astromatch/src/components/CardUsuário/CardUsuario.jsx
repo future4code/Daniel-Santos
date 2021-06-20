@@ -64,6 +64,9 @@ export default function CardPerfilUsuario (props) {
     return (
         <div>
             {infoBio()}
+            <div className="botões">
+                <button onClick={limpar()}></button>
+            </div>
         </div>
     )
 }
