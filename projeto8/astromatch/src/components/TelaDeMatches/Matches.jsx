@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
-import { useState } from 'react';
 
 export default function DeuMatch () {
 
@@ -23,12 +22,14 @@ export default function DeuMatch () {
 
     const marcouMatch = () => {
         
-        deuMatch.map((select) => {
+       return deuMatch.map((profile) => {
             
             return (
-                <div key={select.id}>
-                    <img className="photo" src={select.photo}/>
-                    <div className="Name">{select.name}</div>
+                <div key={profile.id}>
+                    <ul>
+                        <li><img  src={profile.photo}></img></li>
+                        <li><div>{profile.name}</div></li>
+                    </ul>
                 </div>
             )
         } )
@@ -37,7 +38,12 @@ export default function DeuMatch () {
 
     return (
         <div>
-            {marcouMatch()}
+            <div className="Head">
+               
+            </div>
+            <div>
+                {marcouMatch()}
+            </div>
         </div>
     )
 

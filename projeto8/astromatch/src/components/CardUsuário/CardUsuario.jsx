@@ -7,7 +7,7 @@ export default function CardPerfilUsuario () {
 
 
     const chamarPerfil = () => {
-        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/darvas/person"
+        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person"
         axios
         .get (url)
         .then((response) => {
@@ -22,7 +22,7 @@ export default function CardPerfilUsuario () {
 
 
     const escolherPerfil = (id, choice) => {
-        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/darvas/choose-person"
+        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person"
         axios.post(url, {id, choice})
         .then(chamarPerfil())
         .catch(err => {
@@ -32,7 +32,7 @@ export default function CardPerfilUsuario () {
     }
 
     const limpar = async () => {
-        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/darvas/clear"
+        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/clear"
         try {
           await axios.put(url)
          chamarPerfil()
@@ -51,9 +51,9 @@ export default function CardPerfilUsuario () {
 
         return (
             <div className="CardFoto">
-                <img className="photo" src={perfil.photo}/>
-                <div className="name">{perfil.name}, {perfil.age} anos</div>
-                <div className="Bio">{perfil.bio}</div>
+                <img src={perfil.photo}></img>
+                <div >{perfil.name}, {perfil.age} anos</div>
+                <div >{perfil.bio}</div>
             </div>
         )
         
@@ -61,12 +61,17 @@ export default function CardPerfilUsuario () {
 
 
     return (
-        <div>
-            {infoBio()}
-            <div className="botões">
-                <button onClick={() => escolherPerfil(perfil.id, !perfil.choice)}>X</button>
-                <button onClick={limpar}>limpar</button>
-                <button onClick={() => escolherPerfil(perfil.id, perfil.choice)}>Y</button>
+        <div className="CardMaster">
+            <div className="Header">
+               
+            </div>
+            <div>
+                {infoBio()}
+                <div className="botões">
+                    <button onClick={() => escolherPerfil(perfil.id, false)}>X</button>
+                    <button onClick={limpar}>limpar</button>
+                    <button onClick={() => escolherPerfil(perfil.id, true)}>Y</button>
+                </div>
             </div>
         </div>
     )
