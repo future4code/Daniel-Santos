@@ -31,13 +31,15 @@ export default function CardPerfilUsuario () {
         
     }
 
-    const limpar = ( ) => {
+    const limpar = async () => {
         const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/darvas/clear"
-        axios.put(url)
-        .then(chamarPerfil())
-        .catch((err) => {
+        try {
+          await axios.put(url)
+         chamarPerfil()
+        } catch (err) {
             console.log(err, "Rodou!!!")
-        })
+        }
+        
     }
 
     useEffect(() => {
@@ -63,7 +65,7 @@ export default function CardPerfilUsuario () {
             {infoBio()}
             <div className="botões">
                 <button onClick={() => escolherPerfil(perfil.id, !perfil.choice)}>X</button>
-                {/* <button onClick={limpar()}>limpar</button> */}
+                <button onClick={limpar}>limpar</button>
                 <button onClick={() => escolherPerfil(perfil.id, perfil.choice)}>Y</button>
             </div>
         </div>
