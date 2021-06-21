@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import CardPerfilUsuario from './components/CardUsuário/CardUsuario';
 import DeuMatch from './components/TelaDeMatches/Matches';
 import Head from './components/Header';
+import { MainBody,SecBody } from './components/styled';
+
 
 
 
@@ -42,12 +44,12 @@ const TrocatelaRenderizada = () =>{
 }
 
   return (
-    <div >
+    <MainBody>
       <Head flip={TrocatelaRenderizada}/>
-      <div>
+      <SecBody>
        {trocarTela()}
-      </div>
-    </div>
+      </SecBody>
+    </MainBody>
   );
 }
 

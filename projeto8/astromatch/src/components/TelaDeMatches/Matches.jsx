@@ -5,9 +5,10 @@ export default function DeuMatch () {
 
     const [deuMatch, setDeuMatch] = useState ([])
 
+    const Aluno = ":aluno"
 
     const chamarMatch = () => {
-        const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/matches"
+        const url = `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${Aluno}/matches`
         axios
         .get (url)
         .then ((response) => {
