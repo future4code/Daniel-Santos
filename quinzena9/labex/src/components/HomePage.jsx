@@ -1,4 +1,7 @@
-import React from 'react'
+import React from "react";
+import Header from "./Header.jsx";
+import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const HeaderContainer = styled.div`
   display: flex;
