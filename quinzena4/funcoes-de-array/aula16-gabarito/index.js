@@ -1,109 +1,49 @@
-let arrDespesas = []
-imprimirDespesas(arrDespesas)
-imprimirExtrato()
+let result = []
 
-
-// PRIMEIRO
-function imprimirDespesas(despesas){
-    let divDespesas = document.getElementById('despesas')
-    divDespesas.innerHTML = '<p><u>Despesas Detalhadas</u></p>'
-
-    // AQUI VEM A IMPLEMENTAÇÃO
-}
-
-
-// SEGUNDO 
-function imprimirExtrato(){
-    let divExtrato = document.getElementById('extrato')
-    let gastoTotal = 0
-    let gastoAlimentacao = 0
-    let gastoUtilidades = 0
-    let gastoViagem = 0
-
-
-    // AQUI VEM A IMPLEMENTAÇÃO
-
-    divExtrato.innerHTML = `<p>Extrato: Gasto Total: R$${gastoTotal} | Alimentação: R$${gastoAlimentacao} | 
-                                        Utilidades: R$${gastoUtilidades} | Viagem: R$${gastoViagem}</p>`
-}
-
-
-function limparFiltros() {
-    document.getElementById('tipoFiltro').value = ""
-    document.getElementById('valorFiltroMin').value = ""
-    document.getElementById('valorFiltroMax').value = ""
-}
-
-
-
-function adicionarDespesa(){
-    let valorCdt = document.getElementById('valorCadastro')
-    let tipoCtd = document.getElementById('tipoCadastro')
-    let descricaoCtd = document.getElementById('descricaoCadastro')
-
-    if(validarValor(valorCdt) && validarTipo(tipoCtd) && validarDescricao(descricaoCtd)){
-        let novaDespesa = {
-            valor: Number(valorCdt.value),
-            tipo: tipoCtd.value,
-            descricao: descricaoCtd.value,
-        }
-
-        arrDespesas.push(novaDespesa)
-        
-        valorCdt.value = ""
-        tipoCtd.value = ""
-        descricaoCtd.value = ""
-
-        
-        limparFiltros()
-        imprimirDespesas(arrDespesas)
-        imprimirExtrato()
+for(let i=0; i < 200; i++){
+    if(i % 2 === 0 ){
+        result.push(i/2)
     } else {
-        alert("`Faltou algum valor ou algum valor é um número negativo`")
+        result.push(i)
     }
 }
 
+console.log(result)
 
+let results = []
 
-// TERCEIRO
-function filtrarDespesas(){
-    let tipoFiltro = document.getElementById('tipoFiltro').value
-    let valorMin = Number(document.getElementById('valorFiltroMin').value)
-    let valorMax = Number(document.getElementById('valorFiltroMax').value)
-
-
-    let despesasFiltradas // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
-
-    imprimirDespesas(despesasFiltradas)
-}
-
-
-
-
-
-
-
-// FunÇoes que fazem validaÇoes dos inputs de criaÇao de despesas 
-
-// NÃO SE PREOCUPEM EM ENTENDER ESSAS FUNÇÕES
-
-function validarValor(valor){
-    if(valor.value.length > 0 && parseInt(valor.value) > 0){
-        return true
+for (let i=0; i< 200; i++) {
+    for(let j = 0; j < i ; j++){
+    if(i % 2 ===0 ){
+        results.push(i/2)
+    } else {
+        results.push(i)
     }
-    return false
-}
+}}
 
-function validarTipo(tipo){
-    if(tipo.value !== ""){
-        return true
-    }
-    return false
-}
+console.log(results)
 
-function validarDescricao(texto){
-    if(texto.value.replace(/ /g,"").length !== 0){
-        return true
+let resultz = []
+
+for (let i=0; i< 200; i++) {
+    for(let j = 0; j < i ; j*= 2 ){
+    if(i % 2 ===0 ){
+        resultz.push(i/2)
+    } else {
+        resultz.push(i)
     }
-    return false
-}
+}}
+
+console.log(resultz)
+
+// 1 => Todos os trechos são voltados para inserir número em um array vazio.
+// E tudo ocorre através de um loop.
+
+// 2 => O primeiro código inseri os números de 199 elementos no array dividindo sempre todo index do array por dois
+// e aquele que possuir resto 0 é inserido no array dividido por 2, o segundo imprime no array 19900 elementos,
+//seguindo a mesma lógica básica do primeiro código, porém inserindo  o número vezes ao que ele representa greficamente (ex. [3,3,3,4,4,4,4])
+// Já o terceiro código não funciona pois o loop do For não aceita dentro de sua fórmula o incrementos no indice que diferentes do sinal de adição ou subtração.
+
+// código 3; código 1; código 2 .... Cógido 3 pois de ínicio já apresenta erro que logo o navegador identifica e para de rodar;
+// Código 1 pois insere menos indices no array e não possui um loop dentro de outro loop como o código 2 que faz uso disso para imprimir
+// mais indices no array.

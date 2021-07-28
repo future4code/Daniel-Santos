@@ -5,14 +5,14 @@ import {useEffect, useState} from  "react";
 
 export default function Poket (props) {
 
-    const [pokemon, setPokemon] = useState ([])
+    const [pokemon, setPokemon] = useState ({})
 
     
     const catchThemAll = () => {
-      const Url = `https://pokeapi.co/api/v2/pokemon/12/` 
+      const Url = `https://pokeapi.co/api/v2/pokemon/1` 
       axios
       .get(Url)
-      .then((response) => setPokemon(response.data))
+      .then((response) => setPokemon({pokemon: response.data}))
       .catch((err) => console.log("Erro"))
     }
 
@@ -20,9 +20,11 @@ export default function Poket (props) {
         catchThemAll(props.pokemon)
     }, [props.pokemon])
 
+    console.log(pokemon)
+
    
     return (
-        <div>
+      <div>
         <p>{pokemon.name}</p>
         <p>{pokemon.weight} Kg</p>
         {pokemon.types && <p>{pokemon.types[0].type.name}</p>}
@@ -30,5 +32,5 @@ export default function Poket (props) {
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
         )}
       </div>
-    )
-}
+    );
+  }
